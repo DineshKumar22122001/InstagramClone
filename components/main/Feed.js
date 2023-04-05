@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 
 const Feed = () => {
   return (
-    <View>
+    <View name="feed" options={{ headerShown: true }}>
       <Text>Feed</Text>
     </View>
   );

@@ -101,6 +101,7 @@ export default class App extends Component {
               <Stack.Screen
                 name="Save"
                 component={Save}
+                options={{ headerShown: true }}
                 // options={{ headerShown: false }}
               ></Stack.Screen>
             </Stack.Navigator>

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { View, Button, TextInput } from "react-native";
+import { Text, View, Button, TextInput, StyleSheet } from "react-native";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
+import styles from "../App.style";
 
 export class Register extends Component {
   constructor(props) {
@@ -38,22 +39,28 @@ export class Register extends Component {
     return (
       <View style={{ padding: 30 }}>
         <TextInput
-          style={{ paddingBottom: 30 }}
-          placeholder="name"
+          style={styles.input}
+          placeholder="Name"
           onChangeText={(name) => this.setState({ name })}
         />
         <TextInput
-          style={{ paddingBottom: 30 }}
-          placeholder="email"
+          style={styles.input}
+          placeholder="Email"
           onChangeText={(email) => this.setState({ email })}
         />
         <TextInput
-          style={{ paddingBottom: 30 }}
-          placeholder="password"
+          style={styles.input}
+          placeholder="Password"
           secureTextEntry={true}
           onChangeText={(password) => this.setState({ password })}
         />
-        <Button onPress={() => this.onSignUp()} title="Sign Up"></Button>
+        <Text
+          style={styles.button}
+          className="button"
+          onPress={() => this.onSignUp()}
+        >
+          SIGN UP
+        </Text>
       </View>
     );
   }

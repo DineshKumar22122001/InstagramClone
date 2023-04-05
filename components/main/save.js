@@ -8,9 +8,11 @@ require("firebase/compat/storage");
 import { StackActions } from "@react-navigation/native";
 
 const Save = (props, { navigation }) => {
-  //   console.log(props.route.params.image);
+
   const [caption, setCaption] = useState("");
+
   const uploadImage = async () => {
+
     const uri = props.route.params.image;
     console.log(firebase.auth().currentUser.uid);
     const childPath = `post/${

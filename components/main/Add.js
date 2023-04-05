@@ -92,6 +92,7 @@ import {
 } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import { Camera, CameraType } from "expo-camera";
+import styles from "../App.style";
 
 export default function Add({ navigation }) {
   const [hasGalleryPermission, setHasGalleryPermission] = useState(null);
@@ -168,14 +169,3 @@ export default function Add({ navigation }) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  cameraContainer: {
-    flex: 1,
-    flexDirection: "row",
-  },
-  fixedRatio: {
-    flex: 1,
-    aspectRatio: 1,
-  },
-});
